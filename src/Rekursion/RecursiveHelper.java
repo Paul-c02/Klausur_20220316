@@ -16,10 +16,13 @@ public class RecursiveHelper {
     }
 
     public static int multiplicate(int number) {
-        //like why not?
-        if (number > 0)
+        if (number > 1)
             return number * multiplicate(number - 1);
-        else return 1;
+        else if (number <= 0) {
+            return 0;
+        } else
+            return 1;
+
     }
     public static List<Integer> findEvenNumbers(int numbersCount) {
         List<Integer> numbers = new ArrayList<>();
