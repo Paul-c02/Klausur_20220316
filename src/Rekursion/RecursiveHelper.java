@@ -10,8 +10,8 @@ public class RecursiveHelper {
     public static void main(String[] args) {
         System.out.println(multiplicate(5));
         System.out.println(multiplicate(-1));
-        System.out.println(findEvenNumbers(8));
-        ArrayList<Integer> numbers = (ArrayList<Integer>) findEvenNumbers(8);
+        System.out.println(findEvenNumbers(11));
+        ArrayList<Integer> numbers = (ArrayList<Integer>) findEvenNumbers(11);
         System.out.println(reorderNumbers(numbers));
     }
 
@@ -26,7 +26,8 @@ public class RecursiveHelper {
     }
     public static List<Integer> findEvenNumbers(int numbersCount) {
         List<Integer> numbers = new ArrayList<>();
-        if (numbersCount%2==0 & numbersCount>0){
+        if(numbersCount%2==1) numbersCount = numbersCount-1;
+        if (numbersCount>0){
             numbers.add(numbersCount);
             numbers.addAll(findEvenNumbers(numbersCount-2));
         }
